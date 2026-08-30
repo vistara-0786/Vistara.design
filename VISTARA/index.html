@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VISTARA — Quiet Luxury. Timeless Beauty.</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a href="index.html" class="logo">
+        <span class="logo-v">V</span>
+        <span>VISTARA</span>
+    </a>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="shop.html">SHOP</a>
+        <a href="index.html#about">ABOUT</a>
+    </nav>
+
+    <div class="header-actions">
+        <a href="shop.html">SEARCH</a>
+        <a href="bag.html">BAG <span id="bagCount">0</span></a>
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- HERO SLIDER -->
+<section class="hero-slider">
+
+    <div class="hero-slide active">
+
+        <img
+            src="hero-01.jpeg"
+            alt="VISTARA Jewellery Collection"
+        >
+
+        <div class="hero-overlay">
+
+            <p class="eyebrow">
+                VISTARA JEWELLERY
+            </p>
+
+            <h1>
+                QUIET LUXURY.
+                <br>
+                TIMELESS BEAUTY.
+            </h1>
+
+            <p>
+                Refined jewellery designed
+                for modern elegance.
+            </p>
+
+            <a href="shop.html" class="hero-button">
+                SHOP COLLECTION
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-slide">
+
+        <img
+            src="hero-02.jpeg"
+            alt="VISTARA Men's Jewellery"
+        >
+
+        <div class="hero-overlay">
+
+            <p class="eyebrow">
+                VISTARA JEWELLERY
+            </p>
+
+            <h1>
+                MODERN ELEGANCE.
+                <br>
+                TIMELESS STYLE.
+            </h1>
+
+            <p>
+                Discover refined pieces
+                made for everyday luxury.
+            </p>
+
+            <a href="shop.html" class="hero-button">
+                SHOP COLLECTION
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="hero-arrow hero-prev"
+        type="button"
+        onclick="changeHero(-1)"
+    >
+        ‹
+    </button>
+
+
+    <button
+        class="hero-arrow hero-next"
+        type="button"
+        onclick="changeHero(1)"
+    >
+        ›
+    </button>
+
+
+    <div class="hero-dots">
+
+        <button
+            class="hero-dot active"
+            type="button"
+            onclick="showHero(0)"
+        ></button>
+
+        <button
+            class="hero-dot"
+            type="button"
+            onclick="showHero(1)"
+        ></button>
+
+    </div>
+
+</section>
+<!-- PHILOSOPHY -->
+
+<section class="intro">
+
+    <p class="eyebrow">VISTARA</p>
+
+    <h2>
+        JEWELLERY<br>
+        WITH PRESENCE.
+    </h2>
+
+    <p>
+        Refined pieces created for everyday elegance.
+    </p>
+
+</section>
+
+
+<!-- MEN'S NECKLACES -->
+
+<section class="home-products">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">VISTARA MEN</p>
+            <h2>MEN'S NECKLACES</h2>
+        </div>
+
+        <a href="shop.html">VIEW ALL →</a>
+
+    </div>
+
+
+    <div class="horizontal-products">
+
+        <article class="mini-product">
+
+            <img src="mens-necklaces/mens-necklace-01.jpeg"
+                 alt="Men's Dual-Layer Cuban Pendant Necklace">
+
+            <h3>Men's Dual-Layer Cuban Pendant Necklace</h3>
+
+            <p>₹499</p>
+
+            <a href="product.html?id=01">VIEW PRODUCT</a>
+
+        </article>
+
+
+        <article class="mini-product">
+
+            <img src="mens-necklaces/mens-necklace-02.jpeg"
+                 alt="Men's Tiger Eye Necklace">
+
+            <h3>Men's Tiger Eye Necklace</h3>
+
+            <p>₹349</p>
+
+            <a href="product.html?id=02">VIEW PRODUCT</a>
+
+        </article>
+
+
+        <article class="mini-product">
+
+            <img src="mens-necklaces/mens-necklace-03.jpeg"
+                 alt="Silver-Toned Vertical Bar Pendant Necklace">
+
+            <h3>Silver-Toned Vertical Bar Pendant Necklace</h3>
+
+            <p>₹299</p>
+
+            <a href="product.html?id=03">VIEW PRODUCT</a>
+
+        </article>
+
+
+        <article class="mini-product">
+
+            <img src="mens-necklaces/mens-necklace-04.jpeg"
+                 alt="Stylish Stainless Steel Cuban Necklace">
+
+            <h3>Stylish Stainless Steel Cuban Necklace</h3>
+
+            <p>₹249</p>
+
+            <a href="product.html?id=04">VIEW PRODUCT</a>
+
+        </article>
+
+
+        <article class="mini-product">
+
+            <img src="mens-necklaces/mens-necklace-05.jpeg"
+                 alt="Amaal Silver Chain for Men">
+
+            <h3>Amaal Silver Chain for Men</h3>
+
+            <p>₹549</p>
+
+            <a href="product.html?id=05">VIEW PRODUCT</a>
+
+        </article>
+
+
+        <article class="mini-product">
+
+            <img src="mens-necklaces/mens-necklace-06.jpeg"
+                 alt="Brown Tiger Eye Men's Necklace">
+
+            <h3>Brown Tiger Eye Men's Necklace</h3>
+
+            <p>₹349</p>
+
+            <a href="product.html?id=06">VIEW PRODUCT</a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about-section" id="about">
+
+    <div>
+
+        <p class="eyebrow">ABOUT VISTARA</p>
+
+        <h2>
+            TIMELESS<br>
+            BY DESIGN.
+        </h2>
+
+    </div>
+
+    <div>
+
+        <p>
+            VISTARA is built around a simple idea —
+            jewellery should feel refined, effortless
+            and personal.
+        </p>
+
+        <p>
+            Every detail follows a quiet approach
+            to luxury, where elegance speaks for itself.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="final-cta">
+
+    <p class="eyebrow">VISTARA COLLECTION</p>
+
+    <h2>DISCOVER YOUR PIECE.</h2>
+
+    <a href="shop.html" class="dark-button">
+        EXPLORE COLLECTION
+    </a>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">V</div>
+
+    <h3>VISTARA</h3>
+
+    <p>QUIET LUXURY. TIMELESS BEAUTY.</p>
+
+    <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="shop.html">SHOP</a>
+        <a href="#about">ABOUT</a>
+        <a href="bag.html">BAG</a>
+    </div>
+
+    <small>© 2026 VISTARA. ALL RIGHTS RESERVED.</small>
+
+</footer>
+
+
+<script src="script.js"></script>
+<script>
+
+let currentHero = 0;
+
+const heroSlides =
+    document.querySelectorAll(".hero-slide");
+
+const heroDots =
+    document.querySelectorAll(".hero-dot");
+
+
+function showHero(index) {
+
+    if (index >= heroSlides.length) {
+        currentHero = 0;
+    }
+
+    else if (index < 0) {
+        currentHero = heroSlides.length - 1;
+    }
+
+    else {
+        currentHero = index;
+    }
+
+
+    heroSlides.forEach(function(slide, i) {
+
+        slide.classList.toggle(
+            "active",
+            i === currentHero
+        );
+
+    });
+
+
+    heroDots.forEach(function(dot, i) {
+
+        dot.classList.toggle(
+            "active",
+            i === currentHero
+        );
+
+    });
+
+}
+
+
+function changeHero(direction) {
+
+    showHero(currentHero + direction);
+
+}
+
+
+/* AUTO SLIDE */
+
+setInterval(function() {
+
+    changeHero(1);
+
+}, 6000);
+
+</script>
+</body>
+</html>

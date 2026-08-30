@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VISTARA — Checkout</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+<a href="index.html" class="logo">
+<span class="logo-v">V</span>
+<span>VISTARA</span>
+</a>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="shop.html">SHOP</a>
+</nav>
+
+<div class="header-actions">
+<a href="bag.html">BAG</a>
+</div>
+
+</header>
+
+
+<main class="page-container">
+
+<h1>CHECKOUT</h1>
+
+<form class="checkout-form"
+      onsubmit="placeOrder(event)">
+
+<input
+type="text"
+id="name"
+placeholder="Full Name"
+required
+>
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required
+>
+
+<textarea
+id="address"
+placeholder="Full Delivery Address"
+rows="5"
+required
+></textarea>
+
+
+<select id="payment" required>
+
+<option value="">
+Select Payment Method
+</option>
+
+<option value="COD">
+Cash on Delivery
+</option>
+
+<option value="UPI">
+UPI
+</option>
+
+</select>
+
+
+<div id="upiBox" style="display:none">
+
+<p>
+<strong>VISTARA UPI</strong>
+</p>
+
+<p>
+7479373665@fam
+</p>
+
+<p>
+Complete payment using your UPI app, then keep your transaction reference.
+</p>
+
+</div>
+
+
+<button class="order-button"
+type="submit">
+
+PLACE ORDER
+
+</button>
+
+</form>
+
+</main>
+
+
+<script>
+
+const payment =
+document.getElementById("payment");
+
+const upiBox =
+document.getElementById("upiBox");
+
+payment.addEventListener("change", function(){
+
+upiBox.style.display =
+this.value === "UPI" ? "block" : "none";
+
+});
+
+
+function placeOrder(event){
+
+event.preventDefault();
+
+const name =
+document.getElementById("name").value;
+
+const phone =
+document.getElementById("phone").value;
+
+const address =
+document.getElementById("address").value;
+
+const method =
+document.getElementById("payment").value;
+
+
+const order = {
+
+name,
+phone,
+address,
+payment: method,
+items:
+JSON.parse(
+localStorage.getItem("vistaraBag") || "[]"
+)
+
+};
+
+
+localStorage.setItem(
+"vistaraLastOrder",
+JSON.stringify(order)
+);
+
+
+alert(
+"Order details saved on this device. A real online order system requires a backend."
+);
+
+}
+
+</script>
+
+</body>
+</html>

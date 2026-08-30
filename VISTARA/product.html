@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VISTARA — Product</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #faf8f4;
+    color: #222;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.header {
+    height: 90px;
+    background: #fffdf9;
+    border-bottom: 1px solid #e5ddd2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-mark {
+    width: 46px;
+    height: 46px;
+    border: 1px solid #b99a68;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a27d45;
+    font-size: 24px;
+}
+
+.brand-name {
+    letter-spacing: 5px;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.navigation a,
+.bag {
+    text-decoration: none;
+    color: #222;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.product-page {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 40px 5%;
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.product-detail-image {
+    width: 100%;
+    height: 720px;
+    background: #f2eee8;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.product-detail-info {
+    max-width: 520px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #a27d45;
+}
+
+.product-detail-info h1 {
+    font-size: 43px;
+    line-height: 1.1;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.old-price {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.new-price {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.discount {
+    color: #a27d45;
+    font-size: 12px;
+}
+
+.product-description {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.product-actions {
+    display: flex;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.add-to-bag,
+.buy-now {
+    height: 55px;
+    padding: 0 28px;
+    border: 1px solid #25211d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: inherit;
+    letter-spacing: 2px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.add-to-bag {
+    background: #25211d;
+    color: white;
+}
+
+.buy-now {
+    background: white;
+    color: #222;
+}
+
+.product-details {
+    border-top: 1px solid #ddd5ca;
+    padding-top: 20px;
+}
+
+.product-details p {
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 60px 20px;
+    text-align: center;
+    background: #25211d;
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 25px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+@media(max-width: 800px) {
+
+    .header {
+        padding: 12px 20px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .product-page {
+        display: block;
+        padding: 20px 15px;
+    }
+
+    .product-detail-image {
+        height: auto;
+        min-height: 520px;
+    }
+
+    .product-detail-image img {
+        width: 100%;
+        height: auto;
+        max-height: 700px;
+    }
+
+    .product-detail-info {
+        padding: 30px 5px;
+    }
+
+    .product-detail-info h1 {
+        font-size: 32px;
+    }
+
+    .product-actions {
+        flex-direction: column;
+    }
+
+    .add-to-bag,
+    .buy-now {
+        width: 100%;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+    <div class="brand">
+
+        <div class="logo-mark">V</div>
+
+        <div class="brand-name">
+            VISTARA
+        </div>
+
+    </div>
+
+    <nav class="navigation">
+
+        <a href="index.html">HOME</a>
+        <a href="shop.html">SHOP</a>
+        <a href="index.html#about">ABOUT</a>
+        <a href="index.html#account">ACCOUNT</a>
+
+    </nav>
+
+    <a href="bag.html" class="bag">
+        BAG
+    </a>
+
+</header>
+
+
+<main>
+
+<section class="product-page">
+
+
+<div class="product-detail-image">
+
+    <img
+        id="productImage"
+        src=""
+        alt="VISTARA Product">
+
+</div>
+
+
+<div class="product-detail-info">
+
+    <p class="eyebrow">
+        VISTARA MEN
+    </p>
+
+    <h1 id="productName">
+        Product
+    </h1>
+
+
+    <div class="product-price">
+
+        <span id="oldPrice" class="old-price"></span>
+
+        <span id="newPrice" class="new-price"></span>
+
+        <span id="discount" class="discount"></span>
+
+    </div>
+
+
+    <p class="product-description">
+
+        A refined piece designed for effortless
+        everyday style and timeless elegance.
+
+    </p>
+
+
+    <div class="product-actions">
+
+        <button
+            class="add-to-bag"
+            onclick="addToBag()">
+
+            ADD TO BAG
+
+        </button>
+
+
+        <a
+            href="checkout.html"
+            class="buy-now">
+
+            BUY NOW
+
+        </a>
+
+    </div>
+
+
+    <div class="product-details">
+
+        <p>
+            <strong>Collection:</strong>
+            Men's Necklace
+        </p>
+
+        <p>
+            <strong>Delivery:</strong>
+            India
+        </p>
+
+        <p>
+            <strong>Payment:</strong>
+            COD & UPI
+        </p>
+
+    </div>
+
+</div>
+
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <h3>VISTARA</h3>
+
+    <p>
+        QUIET LUXURY. TIMELESS BEAUTY.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="index.html">HOME</a>
+        <a href="shop.html">SHOP</a>
+        <a href="index.html#about">ABOUT</a>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+const products = {
+
+"01": {
+name: "Men's Dual-Layer Cuban Pendant Necklace",
+image: "mens-necklaces/mens-necklace-01.jpeg",
+oldPrice: "₹599",
+newPrice: "₹499",
+discount: "17% OFF"
+},
+
+"02": {
+name: "Men's Tiger Eye Necklace",
+image: "mens-necklaces/mens-necklace-02.jpeg",
+oldPrice: "₹499",
+newPrice: "₹349",
+discount: "30% OFF"
+},
+
+"03": {
+name: "Silver-Toned Vertical Bar Pendant Necklace",
+image: "mens-necklaces/mens-necklace-03.jpeg",
+oldPrice: "₹399",
+newPrice: "₹299",
+discount: "25% OFF"
+},
+
+"04": {
+name: "Stylish Stainless Steel Cuban Necklace",
+image: "mens-necklaces/mens-necklace-04.jpeg",
+oldPrice: "₹249",
+newPrice: "₹249",
+discount: ""
+},
+
+"05": {
+name: "Amaal Silver Chain for Men",
+image: "mens-necklaces/mens-necklace-05.jpeg",
+oldPrice: "₹699",
+newPrice: "₹549",
+discount: "21% OFF"
+},
+
+"06": {
+name: "Brown Tiger Eye Men's Necklace",
+image: "mens-necklaces/mens-necklace-06.jpeg",
+oldPrice: "₹499",
+newPrice: "₹349",
+discount: "30% OFF"
+},
+
+"07": {
+name: "Ocean Drift Necklace",
+image: "mens-necklaces/mens-necklace-07.jpeg",
+oldPrice: "₹649",
+newPrice: "₹499",
+discount: "23% OFF"
+},
+
+"08": {
+name: "Silver Stainless Steel Lightning Bolt Pendant Chain Necklace",
+image: "mens-necklaces/mens-necklace-08.jpeg",
+oldPrice: "₹399",
+newPrice: "₹299",
+discount: "25% OFF"
+},
+
+"09": {
+name: "Stainless Steel Dog Tag Pendant Necklace",
+image: "mens-necklaces/mens-necklace-09.jpeg",
+oldPrice: "₹899",
+newPrice: "₹699",
+discount: "22% OFF"
+},
+
+"10": {
+name: "Black Millet Necklace",
+image: "mens-necklaces/mens-necklace-10.jpeg",
+oldPrice: "₹749",
+newPrice: "₹649",
+discount: "13% OFF"
+},
+
+"11": {
+name: "Sterling Ivory Layered Necklace",
+image: "mens-necklaces/mens-necklace-11.jpeg",
+oldPrice: "₹1199",
+newPrice: "₹999",
+discount: "17% OFF"
+},
+
+"12": {
+name: "Multi-Beaded Men's Necklace",
+image: "mens-necklaces/mens-necklace-12.jpeg",
+oldPrice: "₹649",
+newPrice: "₹599",
+discount: "8% OFF"
+},
+
+"13": {
+name: "Royalty Faux Pearl Beaded Necklace",
+image: "mens-necklaces/mens-necklace-13.jpeg",
+oldPrice: "₹499",
+newPrice: "₹399",
+discount: "20% OFF"
+},
+
+"14": {
+name: "Multi-Beaded Men's Necklace",
+image: "mens-necklaces/mens-necklace-14.jpeg",
+oldPrice: "₹649",
+newPrice: "₹549",
+discount: "15% OFF"
+}
+
+};
+
+
+const id =
+new URLSearchParams(window.location.search).get("id");
+
+const product = products[id];
+
+
+if(product) {
+
+    document.getElementById("productImage").src =
+        product.image;
+
+    document.getElementById("productImage").alt =
+        product.name;
+
+    document.getElementById("productName").textContent =
+        product.name;
+
+    document.getElementById("oldPrice").textContent =
+        product.oldPrice;
+
+    document.getElementById("newPrice").textContent =
+        product.newPrice;
+
+    document.getElementById("discount").textContent =
+        product.discount;
+
+} else {
+
+    document.getElementById("productName").textContent =
+        "Product Not Found";
+
+}
+
+
+function addToBag() {
+
+    alert("Product added to your VISTARA bag.");
+
+}
+
+</script>
+
+</body>
+</html>

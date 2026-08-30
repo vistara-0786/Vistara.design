@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VISTARA — Bag</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+<a href="index.html" class="logo">
+<span class="logo-v">V</span>
+<span>VISTARA</span>
+</a>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="shop.html">SHOP</a>
+</nav>
+
+<div class="header-actions">
+<a href="shop.html">SEARCH</a>
+<a href="bag.html">BAG</a>
+</div>
+
+</header>
+
+
+<main class="page-container">
+
+<h1>YOUR BAG</h1>
+
+<div id="bagItems"></div>
+
+<div class="bag-total">
+
+<h2 id="bagTotal">₹0</h2>
+
+<a href="checkout.html" class="dark-button">
+CHECKOUT
+</a>
+
+</div>
+
+</main>
+
+
+<script>
+
+const items =
+JSON.parse(localStorage.getItem("vistaraBag") || "[]");
+
+const container =
+document.getElementById("bagItems");
+
+let total = 0;
+
+if(items.length === 0){
+
+container.innerHTML =
+"<p>Your VISTARA bag is empty.</p>";
+
+}else{
+
+items.forEach(item => {
+
+total += Number(item.price);
+
+container.innerHTML += `
+
+<div class="bag-item">
+
+<img src="${item.image}" alt="${item.name}">
+
+<div class="bag-item-info">
+
+<h2>${item.name}</h2>
+
+<p>₹${item.price}</p>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+document.getElementById("bagTotal").textContent =
+"₹" + total;
+
+</script>
+
+</body>
+</html>
